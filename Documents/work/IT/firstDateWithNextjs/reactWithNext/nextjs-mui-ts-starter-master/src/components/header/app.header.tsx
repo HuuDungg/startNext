@@ -19,6 +19,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import Container from '@mui/material/Container';
 import { Avatar } from '@mui/material';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -69,6 +70,8 @@ const AppHeader = () => {
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+    const useRoute = useRouter()
+
     const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
     };
@@ -85,6 +88,10 @@ const AppHeader = () => {
     const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
         setMobileMoreAnchorEl(event.currentTarget);
     };
+
+    const tackleRedirect = () => {
+        useRoute.push('/')
+    }
 
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
@@ -185,11 +192,14 @@ const AppHeader = () => {
                             noWrap
                             component="div"
                             sx={{ display: { xs: 'none', sm: 'block' } }}
+                            onClick={() => {
+                                tackleRedirect()
+                            }}
+                            style={{
+                                cursor: 'pointer'
+                            }}
                         >
-                            <Link style={{
-                                textDecoration: 'unset',
-                                color: 'unset'
-                            }} href={'/'}>HuuDung</Link>
+                            H.DUN9
                         </Typography>
                         <Search>
                             <SearchIconWrapper>
