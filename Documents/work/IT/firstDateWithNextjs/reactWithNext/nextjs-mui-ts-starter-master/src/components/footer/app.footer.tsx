@@ -5,7 +5,6 @@ import { AppBar, Container } from "@mui/material";
 import useHasMounted from '@/utils/custom.hook';
 const AppFooter = () => {
   const hasMounted = useHasMounted();
-  console.log("check enviroment variable: ", process.env.NEXT_PUBLIC_BACKEND_URL)
   if (!hasMounted) return (<></>)//fragment
   return (
     <div>
