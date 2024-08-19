@@ -8,9 +8,14 @@ import ListItem from '@mui/material/ListItem';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import MediaCard from '@/components/MediaCard';
+import MainSlider from '@/components/main/main.slider';
 
 export default function HomePage() {
   return (
-    <div>this is page.txs</div>
+    <>
+      <MainSlider />
+      <MainSlider />
+      <MainSlider />
+    </>
   );
 }
