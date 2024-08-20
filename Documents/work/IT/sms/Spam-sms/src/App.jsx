@@ -77,6 +77,7 @@ function App() {
         onChange={(e) => setSdt(e.target.value)}
         placeholder="Nhập số điện thoại"
       />
+      <br />
       <button onClick={handleRunOnce}>Chạy 1 lần</button>
       <button onClick={handleRunInfinite}>Chạy vô hạn</button>
       <button onClick={handleStopInfinite}>Dừng chạy vô hạn</button>
